@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Лабораторная работа № 9.</title>
+	<script type="text/javascript" src="lab9.js"> </script>
+</head>
+<style type="text/css">
+	body {
+		background-image: url(1.jpg);
+		background-attachment:fixed;
+		background-size: 100% ;
+	}
+	.tasks {
+		text-align: center;
+		display: block;		
+	}
+	.tasks input {
+		padding: 10px;
+		margin: 10px;
+		border-radius: 7px;
+		background-color: #f2bfc6;
+		font-size: 20px; 
+	}
+	.tasks input:hover {
+		background-color: #d99da6;	
+	}
+	#task2 {
+		padding: 10px;
+		margin: 10px;
+		font-size: 30px; 
+	}
+
+</style>
+<body>
+	<div class="tasks">
+	<input type='button' value='Задание 1' onclick='task1()' />
+	<input type='button' value='Задание 2' onclick='task2()' />
+	<input type='button' value='Задание 3' onclick='task3()' />
+	<div id="div_task1"></div>
+	<div id="div_task2"></div>
+	<div id="div_task3"></div>
+	</div>
+</body>
+</html>

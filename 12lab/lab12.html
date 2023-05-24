@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 12</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .dartsArea{
+            width: 100vw;
+        	height: 50vh;
+        	display: flex;
+	    	justify-content: center;
+	    	border-bottom: 1px black solid;
+        }
+	    .darts {
+		    height: 30vh;
+		    padding: 10px;	    
+		}
+        .ballArea{
+            width: 100vw;
+            height: 50vh;
+        }
+        .ball{
+            position: absolute; 
+            top: calc(50vh + 20px); 
+            left: calc(50vw - 50px);
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dartsArea">
+        <img src="darts.png" class="darts">
+    </div>
+    <div class="ballArea">
+        <img draggable="false" src="tennis-ball.png" class="ball" >
+    </div>
+    <script src="lab12.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Лабораторная работа № 12.</title>
+	<script type="text/javascript" src="lab12.js"> </script>
+</head>
+	<style type="text/css">
+	body {
+	    margin: 0;
+	    padding: 0;
+	    height: 100vh;
+	}
+	.dartsArea {
+		width: 100vw;
+        height: 50vh;
+        display: flex;
+	    justify-content: center;
+	    border-bottom: 1px black solid;
+	}
+	.darts {
+	    height: 25vh;
+	    padding: 10px;	    
+	}
+	.ballArea {
+		width: 100vw;
+        height: 50vh;
+	}
+	.ball {
+	    height: 50px;
+	    position: absolute;
+	    left: calc(50% - 3vh);
+	    top: calc(50% + 7vh);
+	}
+	</style>
+<body>
+
+	<div class="dartsArea">
+		<img src="darts.png" class="darts" >
+	</div>
+	<div class="ballArea" >
+		<img src="tennis-ball.png" class="ball" id="ball" draggable="false">
+	</div>
+	
+</body>
+</html> -->

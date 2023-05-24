@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Лабораторная работа № 14.</title>
+	<meta charset="UTF-8">
+	<meta name ="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script type="text/javascript" src="lab14.js"> </script>
+	<link rel="stylesheet" type="text/css" href="mainStyle.css">
+</head>
+<body>
+
+	<div class="dws-wrapper">
+		<div class="dws-form">
+
+			<!-- ЛЭЙБЛЫ НА CSS -->
+			<input type="radio" id="tab-1" name="tabs" checked>
+			<label class="tab"  for="tab-1" title="Вкладка 1">Авторизация</label>
+
+			<input type="radio" name="tabs" id="tab-2">
+			<label class="tab" for="tab-2" title="Вкладка 2">Регистрация</label>
+
+			<!-- ЛЭЙБЛЫ НА JS -->
+			<!-- <label class="tab active" title="Вкладка 1">Авторизация</label>
+				<label class="tab" title="Вкладка 2">Регистрация</label> -->
+
+				<form id="form-1" class="tab-form">
+					<div class="box-input">
+						<input type="text" name="email" class="input" required>
+						<label>Введите E-mail</label>
+					</div>
+
+					<div class="box-input">
+						<input type="password" name="password" class="input" required>
+						<label>Введите пароль</label>
+					</div>
+
+					<a href="#" class="button">Войти</a>
+					<ul class="social">
+						<li><a href="#"><div><i class="fa fa-facebook"></i></div></a></li>
+						<li><a href="#"><div><i class="fa fa-twitter"></i></div></a></li>
+						<li><a href="#"><div><i class="fa fa-instagram"></i></div></a></li>
+						<li><a href="#"><div><i class="fa fa-vk"></i></div></a></li>
+						<li><a href="#"><div><i class="fa fa-youtube"></i></div></a></li>
+
+					</ul>
+					<a href="#">Я забыл свой email или пароль</a>
+				</form>
+
+				<form id="form-2" class="tab-form" >
+					<div class="box-input">
+						<input type="text" name="surname" class="input" title="С заглавной, минимум три буквы в слове" required>
+						<label>Введите фамилию</label>
+					</div>
+
+					<div class="box-input">
+						<input type="text" name="name" class="input" title="С заглавной, минимум две буквы в слове." required >
+						<label>Введите имя</label>
+					</div>
+
+					<div class="box-input">
+						<input type="text" name="dateBirth" class="input" title="хх.хх.хххх" required>
+						<label>Введите дату рождения</label>
+					</div>
+
+					<div class="box-input">
+						<input type="text" name="email" class="input" title="хxx@(mail|gmail).(com|ru)" required>
+						<label>Введите E-mail</label>
+					</div>
+
+					<div class="box-input">
+						<input type="password" name="password" title="Пароль должен содержать хотя бы одно число, хотя бы один спецсимвол, хотя бы одну латинскую букву в нижнем регистре, хотя бы одну латинскую букву в верхнем регистре, не менее 6 символов" class="input" required>
+						<label>Введите пароль</label>
+					</div>
+
+					<a href="#" class="button" onclick="makeValidation()">Регистрация</a>
+
+					<div class="recover"> 
+						<input type="checkbox" id="ckbox">
+						<label for="ckbox">Ознакомлен(а) и принимаю <a href="#">условия регистрации</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</body>
+		</html>

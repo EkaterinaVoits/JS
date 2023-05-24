@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Лабораторная работа № 5.</title>
+	<script type="text/javascript" src="lab5.js"> </script>
+</head>
+<style type="text/css">
+	body {
+		background-image: url(1.jpg);
+		background-attachment:fixed;
+		background-size: 100% ;
+	}
+	.tasks {
+		text-align: center;
+		display: block;		
+	}
+	.tasks input {
+		padding: 10px;
+		margin: 10px;
+		border-radius: 7px;
+		background-color: #f2bfc6;
+		font-size: 20px; 
+	}
+	.tasks input:hover {
+		background-color: #d99da6;	
+	}
+	#task2 {
+		padding: 10px;
+		margin: 10px;
+		font-size: 30px; 
+	}
+
+</style>
+<body>
+	<div class="tasks">
+	<input type='button' value='1 задание' onclick='checkUserExistence()' />
+	<input type='button' value='2 задание' onclick='sortAndSearchUsers()' />
+	<input type='button' value='3-1 задание' onclick='checkUserExistence2()' />
+	<input type='button' value='3-2 задание' onclick='sortAndSearchUsers2()' />
+	<input type='button' value='4 задание' onclick='createIDandPoints()' />
+	<input type='button' value='5 задание' onclick='createPrizesList()' />
+	<input type='button' value='6 задание' onclick='keepTenResults()' />
+	<input type='button' value='7 задание' onclick='findWiners()' />
+	<div id="task7"></div>
+	</div>
+</body>
+</html>

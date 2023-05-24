@@ -1,0 +1,328 @@
+/* -----  google Font  -----*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Roboto, sans-serif;
+	background-image: url(bgr_3.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+/* -----  Выравнивание по середине  -----*/
+.dws-wrapper {
+	/*position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);*/
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.dws-form {
+	background-color: rgb(51 80 142 / 16%);
+	padding: 10px;
+	box-shadow: 0px 0px 30px #0a132bf0;
+}
+
+.dws-form a {
+	text-decoration: none;
+	transition: .5s;
+	color: black;
+}
+
+.dws-form a:hover {
+	color: #293f63;	
+}
+
+.dws-form ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.dws-form input {
+	display: block;
+	width: 100%;
+}
+
+.tab-form {
+	background-color: white;
+	display: none;
+	padding: 30px 20px 20px;
+}
+
+
+.tab-form.active,
+#tab-1:checked ~ #form-1,
+#tab-2:checked ~ #form-2 {
+	display: block;
+}
+
+label.tab {
+	color: white;
+	font-weight: 600;
+	padding: 15px;
+	display: inline-block;
+	border-radius: 3px 3px 0 0;
+	margin-bottom: -1px;
+	cursor: pointer;
+}
+
+label.tab.active {
+	background-color: white;
+	color: red;
+}
+
+
+/*-------------для css-----------*/
+
+/*обращаемся к инпуту с именем табс, у которого активный атрибут чекд*/
+label.tab.active,
+input[name="tabs"]:checked + label {
+	background-color: #fff;
+	color: #385792;
+}
+
+/*скрываем кружочки чекбоксов*/
+input[name="tabs"] {
+	display: none;
+}
+/*--------------------------------*/
+
+/* Иконки во вкладках */
+.tab::before {
+	content: "\f090"; /*юникод*/
+	font-family: "FontAwesome", sans-serif;
+	font-size: 24px;
+	margin-right: 11px;
+	font-weight: normal;
+}
+
+/*обращаемся к псевдоэлементу во 2 вкладке*/
+.tab[for*="2"]::before {
+	content: "\f234";
+}
+
+
+
+
+/* Формы */
+.input {
+	font-size: 16px;
+	border: 2px solid #e9eaea;
+	padding: 12px 14px;
+	box-sizing: border-box;
+	margin-bottom: 22px;
+	color: #4564a7;
+	outline: none;
+}
+.input::placeholder {
+	color: #c4c9c9;
+}
+
+/* Кнопка */
+a.button {
+	background: #385792;
+	color: #ffffff;
+	font-size: 18px;
+	text-transform: uppercase;
+	display: block;
+	text-align: center;
+	line-height: 46px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	border-bottom: 2px solid #02071f;
+}
+
+/* Эффект кнопки */
+.button::before,
+.button::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: #466aa4;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	transition: 0.3s;
+	z-index: -1;
+}
+.button::after {
+	background: #5476b1;
+	top: 100%;
+	left: 0;
+	transition-delay: 0.2s;
+}
+.button:hover::before {
+	left: 0;
+}
+.button:hover::after {
+	top: 0;
+}
+
+
+/* Иконки (анимация)*/
+.social {
+	display: flex;
+	justify-content: space-between;
+	font-size: 24px;
+}
+
+.social a {
+	width: 40px;
+	height: 40px;
+	display: block;
+	line-height: 40px;
+	text-align: center;
+	position: relative;
+}
+
+/*верхняя и нижняя линия*/
+.social li a::before,
+.social li a::after {
+	content: "";
+	position: absolute;
+	background: #5071ac;
+	width: 100%;
+	height: 1px;
+	left: 0;
+	transition: transform 0.5s;
+	transform: scaleY(0);
+}
+/*анимация*/
+.social li a::before {
+	transform-origin: right;
+}
+.social li a::after {
+	transform-origin: left;
+}
+.social li a:hover::before {
+	transform: scaleX(0);
+	transform-origin: left;
+}
+.social li a:hover::after {
+	transform: scaleX(0);
+	transform-origin: right;
+}
+
+/*линии по бокам*/
+.social li a div::before,
+.social li a div::after {
+	content: "";
+	position: absolute;
+	background: #698abc;
+	width: 1px;
+	height: 100%;
+	transition: transform 0.5s;
+	transform: scaleY(0);
+}
+/*выравниваем по контейнеру в стороны*/
+.social li a div::before {
+	left: 0;
+	transform-origin: bottom;
+}
+.social li a div::after {
+	right: 0;
+	transform-origin: top;
+}
+.social li a:hover div::before {
+	transform: scaleY(1);
+	transform-origin: top;
+}
+.social li a:hover div::after {
+	transform: scaleY(1);
+	transform-origin: bottom;
+}
+
+
+
+
+/* Ссылка под соц сетями */
+.social + a {
+	margin-top: 10px;
+	display: block;
+	font-size: 12px;
+	text-align: center;
+}
+
+/* Плавающий текст */
+.box-input {
+	position: relative;
+}
+.box-input input {
+	border: none;
+	border-bottom: 2px solid #e9eaea;
+	padding: 10px 0;
+}
+.box-input label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-top: 10px;
+	color: #c4c9c9;
+	transition: 0.5s;
+	pointer-events: none;
+}
+
+/*обращаемся к инпуту с псевдоклассом фокус*/
+.box-input input:focus ~ label,
+.box-input input:valid ~ label {
+	top: -20px;
+	font-size: 12px;
+	color: #33518d;
+}
+
+/* Анимированный чекбокс */
+.recover {
+	margin-top: 15px;
+	font-size: 12px;
+}
+label[for="ckbox"] {
+	cursor: pointer;
+	padding-left: 35px;
+	width: 260px;
+	display: block;
+	position: relative;
+}
+label[for="ckbox"]::before {
+	content: "";
+	position: absolute;
+	border: 2px solid #c4c9c9;
+	width: 18px;
+	height: 18px;
+	top: 0;
+	left: 0;
+	border-radius: 3px;
+	transition: 0.2s;
+}
+#ckbox:checked + label::before {
+	border-top: 2px solid transparent;
+	border-left: 2px solid transparent;
+	border-right: 2px solid #408cc2;
+	border-bottom: 2px solid #408cc2;
+	transform: rotate(40deg);
+	width: 12px;
+	height: 22px;
+	transform-origin: 100% 100%;
+	top: -4px;
+	left: -5px;
+}
+/*скрываем чекбокс сверху*/
+#ckbox:not(:checked),
+#ckbox:checked {
+	display: none;
+}
+
+
+
+.del {
+	display: none;
+}

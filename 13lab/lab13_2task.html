@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Лабораторная работа № 13-2.</title>
+	
+</head>
+<style type="text/css">
+	html, body {
+        background-image: url(1.jpg);
+        background-attachment:fixed;
+        background-size: 100% ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+	}
+	* {
+		box-sizing: border-box;
+	}
+	.progress-ring {
+        width: 120px;
+        height: 120px;
+        fill: transparent;
+    }
+    .progress-ring__circle {
+        /*с начала как в часах*/
+        transform-origin: center;
+        /*против часовой стрелки*/
+        transform: rotate(-90deg);
+        transition: stroke-dashoffset 0.3s;
+    }
+    .percent {
+        margin-left: 50px;
+        padding:5px;
+    }
+</style>
+<body>
+	<svg class="progress-ring">
+        <circle class="progress-ring__circle" stroke="black" stroke-width="4px" cx="60" cy="60" r="52"/>
+    </svg>
+    <input type="number" class="percent">
+
+
+
+<script type="text/javascript" src="lab13.js"> </script>
+</body>
+</html>

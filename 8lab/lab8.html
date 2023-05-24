@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Лабораторная работа № 8.</title>
+	<script type="text/javascript" src="lab8.js"> </script>
+</head>
+<style type="text/css">
+	body {
+		background-image: url(1.jpg);
+		background-attachment:fixed;
+		background-size: 100% ;
+	}
+	.tasks {
+		text-align: center;
+		display: block;		
+	}
+	.tasks input {
+		padding: 10px;
+		margin: 10px;
+		border-radius: 7px;
+		background-color: #f2bfc6;
+		font-size: 20px; 
+	}
+	.tasks input:hover {
+		background-color: #d99da6;	
+	}
+	#task2 {
+		padding: 10px;
+		margin: 10px;
+		font-size: 30px; 
+	}
+
+</style>
+<body>
+	<div class="tasks">
+	<input type='button' value='Вывод товаров' onclick='printProducts()' />
+	<input type='button' value='Фильтр' onclick='filterProducts()' />
+	<div id="printAllProductsDIV"></div>
+	<div id="printFilterProductsDIV"></div>
+	</div>
+</body>
+</html>
